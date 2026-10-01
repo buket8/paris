@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Париж те очаква | Ексклузивна оферта</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f8f5f0;
+    color: #24221f;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 17, 19, .82),
+            rgba(17, 17, 19, .38),
+            rgba(17, 17, 19, .10)
+        ),
+        url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2200&q=90")
+        center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 65%,
+            rgba(10,10,10,.65)
+        );
+}
+
+.hero-content {
+    width: min(1250px, 90%);
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-small {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+}
+
+.hero-small::before {
+    content: "";
+    width: 55px;
+    height: 1px;
+    background: #d8b477;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(75px, 10vw, 145px);
+    font-weight: 500;
+    line-height: .78;
+
+    letter-spacing: -3px;
+
+    max-width: 850px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e1c18b;
+}
+
+.hero-subtitle {
+    max-width: 600px;
+
+    margin-top: 38px;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.88);
+}
+
+
+/* =====================================================
+   DISCOUNT BADGE
+===================================================== */
+
+.discount-badge {
+    position: absolute;
+    right: 8%;
+    top: 18%;
+
+    width: 175px;
+    height: 175px;
+
+    border-radius: 50%;
+
+    background: rgba(218,184,125,.95);
+
+    color: #27211a;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+
+    transform: rotate(8deg);
+
+    z-index: 3;
+}
+
+.discount-badge strong {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 57px;
+    line-height: .9;
+}
+
+.discount-badge span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+.scroll {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    color: rgba(255,255,255,.7);
+
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.scroll::after {
+    content: "";
+    display: block;
+
+    width: 1px;
+    height: 45px;
+
+    background: #d8b477;
+
+    margin: 12px auto 0;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+    padding: 130px 20px;
+    background: #fffdf9;
+    text-align: center;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+.label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #b18a54;
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: .95;
+    font-weight: 500;
+
+    color: #292621;
+
+    margin-bottom: 30px;
+}
+
+.intro h2 span {
+    color: #b18a54;
+}
+
+.intro-text {
+    max-width: 720px;
+    margin: auto;
+
+    color: #77736d;
+
+    font-size: 16px;
+    line-height: 2;
+}
+
+
+/* =====================================================
+   ROMANCE
+===================================================== */
+
+.romance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 680px;
+
+    background: #eae2d7;
+}
+
+.romance-image {
+    background:
+        url("https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=1400&q=90")
+        center / cover no-repeat;
+
+    min-height: 600px;
+}
+
+.romance-content {
+    display: flex;
+    align-items: center;
+
+    padding: 80px;
+}
+
+.romance-inner {
+    max-width: 520px;
+}
+
+.romance h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 5vw, 75px);
+
+    font-weight: 500;
+    line-height: .95;
+
+    margin-bottom: 30px;
+}
+
+.romance p {
+    color: #6e6962;
+
+    font-size: 15px;
+    line-height: 2;
+
+    margin-bottom: 25px;
+}
+
+.quote {
+    border-left: 1px solid #b18a54;
+    padding-left: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+
+    color: #423c35;
+
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   OFFER
+===================================================== */
+
+.offer {
+    padding: 130px 20px;
+
+    background:
+        linear-gradient(
+            rgba(32,29,25,.90),
+            rgba(32,29,25,.90)
+        ),
+        url("https://images.unsplash.com/photo-1503917988258-f87a78e3c995?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.offer-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.offer-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.offer-heading p {
+    margin-top: 20px;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.offer-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 950px;
+
+    margin: auto;
+}
+
+.offer-card {
+    border: 1px solid rgba(220,190,140,.4);
+
+    background: rgba(255,255,255,.06);
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    backdrop-filter: blur(5px);
+
+    transition: .3s;
+}
+
+.offer-card:hover {
+    background: rgba(255,255,255,.11);
+    transform: translateY(-5px);
+}
+
+.offer-icon {
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+.offer-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+}
+
+.offer-card p {
+    color: rgba(255,255,255,.58);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CONTACT INSIDE OFFER
+===================================================== */
+
+.offer-contact {
+    max-width: 650px;
+
+    margin: 60px auto 0;
+
+    text-align: center;
+
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(220,190,140,.25);
+}
+
+.offer-contact span {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.5);
+
+    margin-bottom: 10px;
+}
+
+.offer-contact strong {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+}
+
+.offer-contact a {
+    color: #e0bd82;
+
+    transition: .3s;
+}
+
+.offer-contact a:hover {
+    color: white;
+}
+
+.offer-contact p {
+    margin-top: 8px;
+
+    color: rgba(255,255,255,.5);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.moments {
+    padding: 130px 20px;
+
+    background: #f8f5f0;
+}
+
+.moments-heading {
+    text-align: center;
+
+    margin-bottom: 65px;
+}
+
+.moments-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(50px, 6vw, 78px);
+
+    font-weight: 500;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr 1fr;
+
+    grid-template-rows: 300px 300px;
+
+    gap: 15px;
+}
+
+.gallery div {
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.gallery div::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,.04);
+
+    transition: .4s;
+}
+
+.gallery div:hover::after {
+    background: rgba(0,0,0,.20);
+}
+
+.gallery-1 {
+    grid-row: span 2;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=85");
+}
+
+.gallery-2 {
+    background-image:
+        url("https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery-3 {
+    background-image:
+        url("https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?auto=format&fit=crop&w=1000&q=85");
+}
+
+.gallery-4 {
+    background-image:
+        url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=85");
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience {
+    padding: 130px 20px;
+
+    background: #fff;
+}
+
+.experience-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+    text-align: center;
+}
+
+.experience-item {
+    padding: 20px;
+}
+
+.experience-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 65px;
+
+    color: #c7a56d;
+
+    margin-bottom: 10px;
+}
+
+.experience-item h3 {
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.experience-item p {
+    font-size: 13px;
+
+    color: #858078;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.final {
+    min-height: 760px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(20,17,15,.68),
+            rgba(20,17,15,.68)
+        ),
+        url("https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?auto=format&fit=crop&w=2200&q=90")
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.final-content {
+    width: min(850px, 90%);
+}
+
+.final .label {
+    color: #e0bd82;
+}
+
+.final h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 9vw, 115px);
+
+    font-weight: 500;
+
+    line-height: .85;
+
+    margin-bottom: 30px;
+}
+
+.final p {
+    max-width: 580px;
+
+    margin: auto auto 40px;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,.78);
+}
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+.phone-box {
+    margin: 35px auto;
+
+    padding: 28px 35px;
+
+    max-width: 520px;
+
+    border-top: 1px solid rgba(212,175,114,.45);
+
+    border-bottom: 1px solid rgba(212,175,114,.45);
+}
+
+.phone-label {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.6);
+
+    margin-bottom: 8px;
+}
+
+.phone-number {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 43px;
+
+    font-weight: 600;
+
+    color: #e0bd82;
+
+    margin-bottom: 8px;
+
+    transition: .3s;
+}
+
+.phone-number:hover {
+    color: white;
+}
+
+.phone-note {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.55);
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 19px 34px;
+
+    background: #d4af72;
+
+    color: #29231c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.button:hover {
+    background: white;
+
+    transform: translateY(-3px);
+}
+
+.button span {
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #171513;
+
+    color: rgba(255,255,255,.4);
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.created-by { margin-top: 12px; font-size: 10px; letter-spacing: 1px; text-transform: none; color: rgba(255,255,255,.35); } .created-by strong { color: #d4af72; font-weight: 500; }
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 850px;
+
+        background-position: 62% center;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .discount-badge {
+        width: 125px;
+        height: 125px;
+
+        top: 8%;
+        right: 5%;
+    }
+
+    .discount-badge strong {
+        font-size: 40px;
+    }
+
+    .discount-badge span {
+        font-size: 8px;
+    }
+
+    .romance {
+        grid-template-columns: 1fr;
+    }
+
+    .romance-image {
+        min-height: 500px;
+    }
+
+    .romance-content {
+        padding: 70px 30px;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 300px 220px 220px;
+    }
+
+    .gallery-1 {
+        grid-row: span 1;
+
+        grid-column: span 2;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .phone-number {
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 62px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .discount-badge {
+        top: 10%;
+    }
+
+    .gallery {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .gallery div {
+        height: 300px;
+    }
+
+    .phone-box {
+        padding: 25px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Специално за нашите лоялни клиенти
+        </div>
+
+        <h1>
+            Париж
+            <span>те очаква.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Вече три пъти ни се доверихте за своите пътувания.
+            Благодарим Ви за доверието.
+            Сега е време да Ви направим специален подарък.
+        </p>
+
+    </div>
+
+
+    <div class="discount-badge">
+
+        <strong>-30%</strong>
+
+        <span>
+            специална<br>
+            отстъпка
+        </span>
+
+    </div>
+
+
+    <div class="scroll">
+        Открийте повече
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="label">
+            Ексклузивно за Вас
+        </div>
+
+        <h2>
+            Някои пътувания<br>
+            <span>се помнят завинаги.</span>
+        </h2>
+
+        <p class="intro-text">
+
+            Като наш лоялен клиент получавате
+            ексклузивна промо оферта, създадена
+            специално за Вас.
+
+            Насладете се на няколко незабравими дни
+            в Париж с <strong>30% специална отстъпка</strong>
+            за следващото Ви пътуване.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ROMANCE
+===================================================== -->
+
+<section class="romance">
+
+    <div class="romance-image"></div>
+
+    <div class="romance-content">
+
+        <div class="romance-inner">
+
+            <div class="label">
+                Париж с любим човек
+            </div>
+
+            <h2>
+                Градът на любовта
+                Ви очаква.
+            </h2>
+
+            <p>
+                Разходки край Сена.
+                Малките парижки кафенета.
+                Вечерните светлини.
+                Айфеловата кула, която озарява небето.
+            </p>
+
+            <p>
+                Подарете си време за двама,
+                нови преживявания и спомени,
+                които ще останат завинаги.
+            </p>
+
+            <div class="quote">
+                „Вашето следващо пътуване започва оттук.“
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OFFER
+===================================================== -->
+
+<section class="offer">
+
+    <div class="container">
+
+        <div class="offer-heading">
+
+            <div class="label">
+                Вашата специална оферта
+            </div>
+
+            <h2>
+                Париж с 30% отстъпка
+            </h2>
+
+            <p>
+                Всичко необходимо за едно незабравимо пътуване за двама.
+            </p>
+
+        </div>
+
+
+        <div class="offer-grid">
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    ✈
+                </div>
+
+                <h3>
+                    Полет за двама
+                </h3>
+
+                <p>
+                    Пътуване до Париж за Вас
+                    и Вашия спътник.
+                </p>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    5 нощувки за двама
+                </h3>
+
+                <p>
+                    Пет нощувки, за да имате време
+                    да се потопите истински в атмосферата
+                    на Париж.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-contact">
+
+            <span>
+                Искате да научите повече?
+            </span>
+
+            <strong>
+                Обадете се на
+                <a href="tel:0889325251">
+                    0889 325 251
+                </a>
+            </strong>
+
+            <p>
+                Свържете се с нас и ще изготвим
+                Вашата персонална оферта за пътуването.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="moments">
+
+    <div class="container">
+
+        <div class="moments-heading">
+
+            <div class="label">
+                Paris, mon amour
+            </div>
+
+            <h2>
+                Представете си тези моменти.
+            </h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-1"></div>
+
+            <div class="gallery-2"></div>
+
+            <div class="gallery-3"></div>
+
+            <div class="gallery-4"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section class="experience">
+
+    <div class="container">
+
+        <div class="experience-grid">
+
+
+            <div class="experience-item">
+
+                <div class="experience-number">
+                    01
+                </div>
+
+                <h3>
+                    ПЪТУВАНЕ
+                </h3>
+
+                <p>
+                    Полет за двама до една от
+                    най-романтичните столици в света.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-number">
+                    02
+                </div>
+
+                <h3>
+                    ПРЕСТОЙ
+                </h3>
+
+                <p>
+                    Пет нощувки, изпълнени с
+                    парижка атмосфера и красиви моменти.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <div class="experience-number">
+                    03
+                </div>
+
+                <h3>
+                    СПОМЕНИ
+                </h3>
+
+                <p>
+                    Време за двама, което ще остане
+                    във Вашата история.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final">
+
+    <div class="final-content">
+
+        <div class="label">
+            Специално за Вас
+        </div>
+
+        <h2>
+            Париж<br>
+            Ви очаква.
+        </h2>
+
+        <p>
+            Благодарим Ви, че вече три пъти ни се доверихте.
+            Сега е наш ред да направим следващото Ви
+            пътуване още по-специално.
+        </p>
+
+
+        <div class="phone-box">
+
+            <div class="phone-label">
+                За да изготвим Вашата специална оферта
+            </div>
+
+            <a
+                href="tel:0889325251"
+                class="phone-number"
+            >
+                0889 325 251
+            </a>
+
+            <div class="phone-note">
+                Обадете ни се и ще изготвим
+                Вашата персонална оферта за Париж.
+            </div>
+
+        </div>
+
+
+        <a
+            href="tel:0889325251"
+            class="button"
+        >
+            ОБАДЕТЕ СЕ ЗА ВАШАТА ОФЕРТА
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div> Специална оферта за лоялни клиенти • Париж • 2026 </div> <div class="created-by"> Уебсайтът е изготвен от <strong>Букет Хаджиева</strong> </div>
+
+</footer>
+
+
+</body>
+</html>
